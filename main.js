@@ -10,17 +10,11 @@
 		// debugging
 		console.log("widget", widget);
 
-		var tabs = eowTabs("div", {}, [{
-			name: "Search",
-			content: [
-				eowEl("webview", { 
-					src: "https://playground.eneticum.de/search/" 
-				})
-				.on("dom-ready", function () { this.insertCSS("body, select { background-color: #131313; color: white; }"); })
-			]
-		}]);
+		widget.tabs.addTab("Search", eowEl("webview", { 
+				src: "https://playground.eneticum.de/search/" 
+			})
+			.on("dom-ready", function () { this.insertCSS("body, select { background-color: #131313; color: white; }"); })
+		);
 		
-		widget.appendChild(tabs);
-		
-		tabs.selectTab("Search");
+		widget.tabs.selectTab("Search");
 	});
