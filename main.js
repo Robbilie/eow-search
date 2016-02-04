@@ -2,7 +2,7 @@
 	"use strict";
 
 	Widget.initialize({
-		title: "Search",
+		title: "EOW Search",
 		width: 300,
 		height: 400,
 	}, widget => {
