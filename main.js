@@ -1,21 +1,17 @@
 	
 	"use strict";
 
-	Widget.initialize({
-		title: "EOW Search",
-		width: 300,
-		height: 400,
-	}, widget => {
+	Widget.INSTANCE.loadPlugin({
+		title: "Search",
+		name: "Robbilie/eow-search"
+	}, plugin => {
 
 		// debugging
-		console.log("widget", widget);
-
-		widget.tabs.addTab("Search", eowEl("webview", { 
+		console.log("plugin", plugin);
+		
+		plugin.getBody().appendChild(eowEl("webview", { 
 				src: "https://playground.eneticum.de/search/" 
 			})
-			.on("dom-ready", function () { this.insertCSS("body, select { background-color: #131313; color: white; }"); }),
-			"EOW Search"
-		);
-		
-		widget.tabs.selectTab("Search");
+			.on("dom-ready", function () { this.insertCSS("body, select { background-color: #131313; color: white; }"); })
+		)
 	});
