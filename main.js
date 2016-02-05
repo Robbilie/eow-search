@@ -13,5 +13,5 @@
 				src: "https://playground.eneticum.de/search/" 
 			})
 			.on("dom-ready", function () { this.insertCSS("body, select { background-color: #131313; color: white; }"); })
-		)
+		);
 	});
