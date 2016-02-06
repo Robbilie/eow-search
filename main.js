@@ -12,6 +12,6 @@
 		plugin.getBody().appendChild(eowEl("webview", { 
 				src: "https://playground.eneticum.de/search/" 
 			})
-			.on("dom-ready", function () { this.insertCSS("body, select { background-color: #131313; color: white; }"); })
+			.on("dom-ready", function () { this.insertCSS("body, select { background-color: #131313; color: white; }" + Widget.getTemplate("scrollbar")); })
 		);
 	});
